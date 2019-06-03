@@ -15,7 +15,7 @@ public class DoubleCheck implements Serializable {
         }
     }
 
-    private static DoubleCheck instance;
+    private static volatile DoubleCheck instance;
 
     public static DoubleCheck getInstance() {
         //第一重检查，检查是否已经初始化
